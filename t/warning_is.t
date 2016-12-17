@@ -20,7 +20,8 @@ use constant TESTS =>(
     ["not ok", "a warning", undef, "warning, but didn't expect one"],
     ["ok", undef, undef, "no warning"],
     ["ok", '$!"%&/()=', '$!"%&/()=', "warning with crazy letters"],
-    ["not ok", "warning 1|warning 2", "warning1", "more than one warning"]
+    ["not ok", "warning 1|warning 2", "warning1", "more than one warning"],
+    ["ok","warning\n","warning\n","warning with trailing newline"],
 );
 
 use Test::Builder::Tester tests  => TESTS() * SUBTESTS_PER_TESTS;
@@ -67,7 +68,6 @@ sub test_warning_is {
         }
     }
 }
-
 
 sub _found_warn_msg {
     defined($_[0]) 
