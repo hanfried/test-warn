@@ -27,8 +27,8 @@ WriteMakefile1(
         resources => {
             repository => {
                 type => 'git',
-                url => 'git://github.com/chorny/test-warn.git',
-                web => 'https://github.com/chorny/test-warn',
+                url => 'git://github.com/hanfried/test-warn.git',
+                web => 'https://github.com/hanfried/test-warn',
             },
         },
       keywords => ['testing', 'warnings'],
