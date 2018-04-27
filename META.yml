@@ -1,7 +1,7 @@
 ---
 abstract: Perl extension to test methods for warnings
 author:
-  - 'Alexandr Ciornii <alexchorny@gmail.com>'
+  - 'Janek Schleicher <bigj@kamelfreund.de>'
 build_requires:
   File::Spec: 0
   Test::More: 0
