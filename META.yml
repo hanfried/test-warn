@@ -15,6 +15,10 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Test-Warn
+provides:
+  Test::Warn:
+    file: Warn.pm
+    version: '0.23'
 requires:
   Carp: 1.22
   Sub::Uplevel: 0.12
@@ -24,5 +28,5 @@ requires:
   perl: 5.006
 resources:
   license: http://dev.perl.org/licenses/
-  repository: http://github.com/chorny/test-warn/tree
+  repository: https://github.com/hanfried/test-warn
 version: 0.23
