@@ -10,3 +10,4 @@ Test-Warn-*
 META.json
 *.tar.gz
 *.patch
+*.old
