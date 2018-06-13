@@ -22,7 +22,7 @@ WriteMakefile1(
     'LICENSE'		=> 'perl',
     'MIN_PERL_VERSION'  => 5.006,
     #AUTHOR        => 'Alexandr Ciornii <alexchorny'.'@gmail.com>',
-    AUTHOR         => 'Janek Schleicher <bigj'.'@kamelfreund.de>'
+    AUTHOR         => 'Janek Schleicher <bigj'.'@kamelfreund.de>',
     META_MERGE => {
         'meta-spec' => { version => 2 },
         resources => {
