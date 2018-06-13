@@ -1,7 +1,8 @@
 ---
 abstract: Perl extension to test methods for warnings
 author:
-  - 'Alexandr Ciornii <alexchorny@gmail.com>'
+  - 'Janek Schleicher' <bigj@kamelfreund.de>
+  # - 'Alexandr Ciornii <alexchorny@gmail.com>'
 build_requires:
   File::Spec: 0
   Test::More: 0
@@ -25,4 +26,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/chorny/test-warn/tree
-version: 0.23
+version: 0.34

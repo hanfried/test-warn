@@ -1,4 +1,4 @@
-Test/Warn version 0.32
+Test/Warn version 0.34
 ======================
 
 INSTALLATION
@@ -70,9 +70,9 @@ AUTHOR
     Janek Schleicher, <bigj@kamelfreund.de>
 
 COPYRIGHT AND LICENSE
-    Copyright 2002, 2016-2018 by Janek Schleicher
-    Copyright 2007-2016       by Alexandr Ciornii
-
+    Copyright 2002 by Janek Schleicher
+    Copyright 2007-2016 by Alexandr Ciornii
+    Copyright 2016-2018 by Janek Schleicher
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
