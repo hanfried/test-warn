@@ -282,7 +282,7 @@ use warnings;
 
 use Sub::Uplevel 0.12;
 
-our $VERSION = '0.34';
+our $VERSION = '0.35';
 
 require Exporter;
 
