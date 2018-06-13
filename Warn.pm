@@ -31,7 +31,7 @@ Test::Warn - Perl extension to test methods for warnings
 
 A good style of Perl programming calls for a lot of diverse regression tests.
 
-This module provides a few convenience methods for testing warning based code.
+This module provides a few convenience methods for testing warning based-code.
 
 If you are not already familiar with the L<Test::More> manpage
 now would be the time to go take a look.
@@ -53,7 +53,7 @@ is:
 
   warnings_are {foo()} [], "no warnings"
 
-If you want to test for a warning given by Carp,
+If you want to test for a warning given by Carp
 you have to write something like:
 
   warning_is {carp "msg"} {carped => 'msg'}, "Test for a carped warning";
@@ -160,8 +160,8 @@ Also see L</BUGS AND LIMITATIONS>.
 
 
 Thanks to the grouping in a tree,
-it's simple possible to test for an 'io' warning,
-instead for testing for a 'closed|exec|layer|newline|pipe|unopened' warning.
+it's possible to test simply for an 'io' warning,
+instead of testing for a 'closed|exec|layer|newline|pipe|unopened' warning.
 
 Note, that warnings occurring at compile time
 can only be caught in an eval block. So
@@ -196,7 +196,7 @@ and for warning categories, too:
                  {carped => qr/bar warning/i},
                  'io'
                 ],
-                "I hope, you'll never have to write a test for so many warnings :-)";
+                "I hope you'll never have to write a test for so many warnings :-)";
 
 =item B<warnings_exist> I<BLOCK STRING|ARRAYREF, TEST_NAME>
 
@@ -229,32 +229,27 @@ If you want to add a warning to a category, send a pull request. Modifications
 should be done to C<< %warnings_in_category >>. You should look into perl source to check
 how warning is looking exactly.
 
-Please note that warnings with newlines inside are making a lot of trouble.
-The only sensible way to handle them is to use are the C<warning_like> or
-C<warnings_like> methods. Background for these problems is that there is no
-really secure way to distinguish between warnings with newlines and a tracing
+Please note that warnings with newlines inside are very awkward.
+The only sensible way to handle them is to use the C<warning_like> or
+C<warnings_like> methods. The background is that there is no
+really safe way to distinguish between warnings with newlines and a
 stacktrace.
 
-If a method has it's own warn handler,
+If a method has its own warn handler,
 overwriting C<$SIG{__WARN__}>,
 my test warning methods won't get these warnings.
 
-The C<warning_like BLOCK CATEGORY, TEST_NAME> method isn't extremely tested.
-Please use this calling style with higher attention and
-tell me if you find a bug.
+The C<warning_like BLOCK CATEGORY, TEST_NAME> method isn't fully tested.
+Please take note if you use this this calling style,
+and report any bugs you find.
 
-=head1 TODO
+=head2 XS warnings
 
-Improve this documentation.
-
-The code has some parts doubled - especially in the test scripts.
-This is really awkward and must be changed.
-
-Please feel free to suggest improvements.
+As described in https://rt.cpan.org/Ticket/Display.html?id=42070&results=3c71d1b101a730e185691657f3b02f21 or https://github.com/hanfried/test-warn/issues/1 XS warnings might not be caught.
 
 =head1 SEE ALSO
 
-Have a look to the similar modules: L<Test::Exception>, L<Test::Trap>.
+Have a look to the similar L<Test::Exception> module. L<Test::Trap>
 
 =head1 THANKS
 
@@ -271,6 +266,8 @@ Copyright 2002 by Janek Schleicher
 
 Copyright 2007-2014 by Alexandr Ciornii, L<http://chorny.net/>
 
+Copyright 2015-2018 by Janek Schleicher
+
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
@@ -283,10 +280,9 @@ use 5.006;
 use strict;
 use warnings;
 
-#use Array::Compare;
 use Sub::Uplevel 0.12;
 
-our $VERSION = '0.32';
+our $VERSION = '0.34';
 
 require Exporter;
 
