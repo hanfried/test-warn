@@ -18,7 +18,7 @@ shift @lines if $lines[0]=~/^TAP version /; #extra line in new TAP
 my @expected=(
 "warn_2 at $file line 12.",
 'ok 1',
-"warn_2 at $file line 17.",
+"warn_1 at $file line 17.",
 'ok 2',
 'ok 3',
 "warn_2 at $file line 26.",
