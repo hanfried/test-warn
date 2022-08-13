@@ -15,6 +15,11 @@ warnings_exist {
 warnings_exist {
   warn "warn_1";
   warn "warn_2";
+} [qr/warn_1/];
+
+warnings_exist {
+  warn "warn_1";
+  warn "warn_2";
 } [qr/warn_1/,qr/warn_2/];
 
 warnings_exist {
